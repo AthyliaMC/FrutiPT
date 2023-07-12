@@ -1,0 +1,36 @@
+// import functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bootstrap-5.3.0/scss/_functions";
+
+$primary: #FAEFD4;
+$secondary: #E1583B;
+$success: #00b069;
+$info: #DF0C01;
+$warning: #EFC86C;
+$danger: #8D0801;
+$light: #FDF8EC;
+$dark: #1A6A4A;
+
+$btn-border-width: 0px;
+
+$navbar-nav-link-padding-x: 1rem;
+
+$focus-ring-opacity: 1;
+$focus-ring-color: #1A6A4A;
+$focus-ring-width: 1px;
+
+$input-placeholder-color: rgba(26, 106, 74, 0.5)!important;
+
+//import bootstrap
+@import '../bootstrap-5.3.0/scss/bootstrap.scss';
+
+// Custom SCSS and CSS (overrides bs)
+
+.navbar-nav {
+    --bs-nav-link-color: #1A6A4A;
+    --bs-nav-link-hover-color: #00b069;
+    --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
+}
+
+.form-control {
+    border: var(--bs-border-width) solid rgba(26, 106, 74, 0.5);
+}

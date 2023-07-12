@@ -1,0 +1,178 @@
+/* overall css */ 
+body {
+    margin: 0;
+    background-color: #FAEFD4;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+@font-face {
+    font-family: 'Lato Extrabold';
+    src: url('Lato-ExtraBold.ttf');
+}
+
+.lato-extrabold {
+    font-family: 'Lato Extrabold', sans-serif;
+}
+
+.fsize-64{
+    font-size: 64px!important;
+    @media (max-width: 768px) {
+        font-size: 40px!important;
+      }
+}
+
+.fsize-96{
+    font-size: 96px!important;
+    @media (max-width: 768px) {
+        font-size: 48px!important;
+      }
+}
+
+.padding-serv{
+    padding-left: 50px!important;
+    padding-right: 50px!important;
+
+    @media (max-width: 768px) {
+        padding-left: 16px!important;
+        padding-right: 16px!important;
+      }
+}
+
+.fs-7{
+    font-size: smaller;
+}
+
+.fw-black{
+    font-weight: 900;
+}
+
+.height-100{
+    height: 100vh;
+}
+
+.top-40 {
+    top: 40%!important;
+}
+
+/* swiper */
+.swiper-button-prev, .swiper-button-next{
+    color: #1A6A4A;
+}
+
+.swiper-button-prev:after {
+    font-family: 'Lato Extrabold';
+    text-transform: none!important;
+    content: "←";
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+
+.swiper-button-next:after {
+    font-family: 'Lato Extrabold';
+    text-transform: none!important;
+    content: "→";
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+
+/* animation language bg */
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through the mask */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Creates a rectangular mask */
+  }
+
+/* animating frutas.php */
+.scrolling-container {
+    width: 200%;
+    height: 200%;
+    overflow: hidden;
+    transform: translate(-5%, -25%) rotate(-12deg);
+}
+
+.scrolling-sentences {
+    white-space: nowrap;
+    transform: translateY(-30%);
+}
+
+.scrolling-sentences div{
+    display: flex;
+    gap: 2em;
+}
+
+.scrolling-sentences p{
+    font-size: 5em;
+    color: rgb(255, 186, 171, 0.4);
+    font-weight: 900;
+    margin-bottom: 0;
+    line-height: 10px;
+}
+
+.R2L{
+    display: inline-block;
+    margin-bottom: 8em;
+    animation: R2L 200s linear infinite;
+}
+
+@keyframes R2L {
+    from {
+        transform: translateX(0%);
+    } to{
+        transform: translateX(-100%);
+    }
+}
+
+.L2R{
+    margin-bottom: 8em;
+    animation: L2R 200s infinite linear;
+}
+
+@keyframes L2R {
+    from {
+        transform: translateX(-30%);
+    } to{
+        transform: translateX(30%);
+    }
+}
+
+.categoryPoster{
+    height: 100vh;
+    width: 100vw;
+}
+
+.svg-container {
+    position: relative;
+    display: inline-block;
+}
+
+.centered-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+}
+
+.marginFruitSafe{
+    padding-top: 400px!important;
+}
+
+.svg-container svg {
+    animation: rotate 40s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotate {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
